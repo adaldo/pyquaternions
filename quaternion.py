@@ -37,7 +37,7 @@ class Quaternion:
                 self.__init__(kwargs["scalar"], *(kwargs["vector"].tolist()))
                 return
             if "axis" in kwargs and "angle" in kwargs:
-                if kwargs["angle"] > np.pi:
+                if kwargs["angle"] > np.pi or kwargs["angle"] < -np.pi:
                     raise ValueError()
                 self.__init__(scalar=np.cos(kwargs["angle"]/2), vector=np.sin(kwargs["angle"]/2)*np.array(kwargs["axis"]))
                 return
@@ -136,6 +136,10 @@ class Quaternion:
     def apply_ang_vel(self, ang_vel):
         ang_vel_quaternion = Quaternion(scalar=0.0, vector=ang_vel)
         return 0.5*ang_vel_quaternion*self
+
+    def distance_squared(self, other):
+        rel = self/other
+        return rel.angle**2
 
 
 
