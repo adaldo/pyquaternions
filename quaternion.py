@@ -162,7 +162,7 @@ class QuaternionRecord:
         self._zrecord.append(vec[2])
 
     def plot(self, *args, **kwargs):
-        plt.plot(self._trecord, self._nrecord, *args, **kwargs)
-        plt.plot(self._trecord, self._xrecord, linestyle="dashed", *args, **kwargs)
-        plt.plot(self._trecord, self._yrecord, *args, **kwargs)
-        plt.plot(self._trecord, self._zrecord, linestyle="dotted", *args, **kwargs)
+        plt.plot(self._trecord, self._nrecord, linestyle="-.", label=r"$n$", *args, **kwargs)
+        plt.plot(self._trecord, self._xrecord, linestyle="solid", label=r"$x$", *args, **kwargs)
+        plt.plot(self._trecord, self._yrecord, linestyle="dashed", label=r"$y$", *args, **kwargs)
+        plt.plot(self._trecord, self._zrecord, linestyle="dotted", label=r"$z$", *args, **kwargs)

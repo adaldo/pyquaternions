@@ -1,15 +1,17 @@
 # pyquaternions
-My implementation of quaternions in python
+My own implementation of quaternions in Python
 
 ## Installation
 For now, just clone the repository in your project.
 
 ## Usage
 Simply `import quaternion.py`.
-I have included two test files with a consensus algorithm, but the usage of `quaternion.py` is general and not specific to consensus problems.
-Run `test.py` to see a graphical animation.
-Run `multiple_runs.py` to run a hundred simulations with randomly generated initial conditions.
 
 ## Uninstall
 - Remove the repository from your computer.
 - Write me a mail and let me know what went wrong.
+
+## Why yet another Python quaternion module?
+There already exists a plethora of Python modules for quaternions on Github.
+In addition, there already exits a plethora of Python modules on Pypy that support quaternions.
+I built this module to educate myself, and to give myself exactly the functionalities that I needed.
